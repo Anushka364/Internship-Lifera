@@ -1,0 +1,106 @@
+/* Full-page layout */
+.event-page {
+  width: 98.8vw;
+  min-height: 100vh; /* stretch section */
+  padding: 60px 5%;
+  background: linear-gradient(to right, #ebebeb, #e4a7ad);
+  color: #2b2b2b;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Titles */
+.event-title {
+  font-size: 4rem;
+  margin-top: 3rem;
+  color: #6b0f0f;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.411);
+  -webkit-text-stroke: 1px white;
+  margin-bottom: 10px; /* tighter spacing with subtitle */
+}
+
+.event-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px; /* spacing before gallery */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Event Cards */
+.event-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  color: #a70000;
+  margin: 15px 0 10px;
+}
+
+.event-card p {
+  font-size: 0.95rem;
+  padding: 0 20px 20px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Video Section */
+.event-video {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-video h2 {
+  color: #5e1313;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.411);
+  -webkit-text-stroke: 1px white;
+  font-size: 3rem;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+}

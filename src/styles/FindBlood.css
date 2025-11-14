@@ -1,0 +1,173 @@
+.find-blood-page {
+  background: linear-gradient(180deg, #f8879c, #68061b, #de4f6e);
+  min-height: 100vh;
+  width: 93.8vw;
+  padding: 3rem 2rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header Section */
+.find-blood-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.find-blood-header h1 {
+  font-size: 4rem;
+  color: #5a0208;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.795),
+    0 0 16px rgba(255, 100, 150, 0.5), 0 0 24px rgba(255, 0, 80, 0.4);
+  -webkit-text-stroke: 0.5px white;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.find-blood-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ffeef1;
+}
+
+/* Steps Section */
+.steps-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* .steps-section h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+} */
+
+.steps-section h2 {
+  color: #5c081e;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.795),
+    0 0 16px rgba(255, 100, 150, 0.5), 0 0 24px rgba(255, 0, 80, 0.4);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  -webkit-text-stroke: 1px white;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.546);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  width: 250px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.step:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.304);
+}
+
+/* Form Section */
+.form-sectionfind {
+  background: white;
+  color: #333;
+  padding: 2.5rem 4rem;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-sectionfind h2 {
+  text-align: center;
+  color: #a7344d;
+  margin-bottom: 1.5rem;
+}
+
+.blood-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-row input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1.5px solid #f2859d;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-row select {
+  width: 100%;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: 1.5px solid #f2859d;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group input:focus,
+textarea:focus,
+select:focus {
+  border-color: #a7344d;
+  box-shadow: 0 0 10px rgba(167, 52, 77, 0.4);
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  background: linear-gradient(90deg, #a7344d, #7a1c30);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #7a1c30, #5c081e);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .find-blood-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

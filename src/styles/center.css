@@ -1,0 +1,423 @@
+/* ----- Base Container ----- */
+.center-container {
+  position: relative;
+  /* height: 100vh; */
+  width: 98.8vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Background Video ----- */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* ----- Overlay (dark layer) ----- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+
+/* ----- Content Layer ----- */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ✅ Keep your existing heading animation as-is */
+.animated-heading {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 10rem;
+  margin-top: 6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 1000;
+  /* text-transform: uppercase; */
+  color: transparent;
+  -webkit-text-stroke: 10px white; /* Thicker outline for bolder look */
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.091),
+    0 0 15px rgba(255, 255, 255, 0.203);
+}
+
+.animated-heading span {
+  -webkit-text-stroke: 10px white;
+  color: transparent;
+  display: inline-block;
+}
+
+.loop span {
+  animation: fillText 2s ease-in-out infinite alternate;
+}
+
+.loop span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loop span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loop span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loop span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loop span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.loop span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes fillText {
+  0% {
+    color: transparent;
+    -webkit-text-stroke: 5px white;
+  }
+  100% {
+    color: white;
+    -webkit-text-stroke: 0px white;
+  }
+}
+
+/* ----- Paragraph ----- */
+.content p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ----- Button ----- */
+.start-btn {
+  background-color: #8f0707;
+  border: 3px solid white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #b80b0b;
+  transform: scale(1.05);
+}
+.below-video {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f2859dad 0%, #a7344d 50%, #75051d 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.below-video {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f2859dad 0%, #a7344d 50%, #75051d 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+  /* padding: 3rem 1rem; */
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ✅ Smooth, elegant top curve */
+.below-video::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: white;
+  clip-path: path(
+    "M0,100 C400,0 800,0 1200,100 C1600,200 2000,200 2400,100 L2400,0 L0,0 Z"
+  );
+  z-index: 2;
+}
+
+/* Optional shadow for depth */
+.below-video::after {
+  content: "";
+  position: absolute;
+  top: 155px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.15);
+  filter: blur(20px);
+  z-index: 1;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .below-video::before {
+    height: 120px;
+    clip-path: path(
+      "M0,80 C200,0 600,0 900,80 C1200,160 1600,160 2000,80 L2000,0 L0,0 Z"
+    );
+  }
+}
+
+/* Subtle glowing accents for a premium look */
+.below-video::before,
+.below-video::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* .below-video::before {
+  top: -80px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: #ffffff33;
+} */
+
+/* .below-video::after {
+  bottom: -100px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  background: #ffadc266;
+} */
+
+/* Content Styling */
+.choose h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: serif;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.choose p {
+  font-size: 1.2rem;
+  font-family: serif;
+  max-width: 850px;
+  line-height: 1.8;
+  color: #f8f8f8;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.choose button {
+  background-color: #fff;
+  color: #75051d;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 30px;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.choose button:hover {
+  background-color: #75051d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .below-video {
+    padding: 4rem 1.5rem;
+  }
+
+  .below-video h2 {
+    font-size: 2.3rem;
+  }
+
+  .below-video p {
+    font-size: 1rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .below-video {
+    padding: 3rem 1rem;
+  }
+
+  .choose h2 {
+    font-size: 1.9rem;
+  }
+
+  .choose p {
+    font-size: 0.95rem;
+  }
+
+  .choose button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+.line {
+  position: relative;
+  width: 100%; /* makes it balanced */
+  height: 40px; /* line thickness */
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  /* margin: 4rem auto; centers it with space above and below */
+  /* border-radius: 50px; */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.868);
+  opacity: 1;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.724);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.line {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.mission {
+  background: linear-gradient(135deg, #ffffffb3, #ffe6ea);
+  color: #a7344d;
+  margin-top: 3rem;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  font-family: serif;
+}
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.mission p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.features {
+  background: #ffffff;
+  border: 30px solid #f4c2c2fa;
+  margin-top: 6rem;
+  width: 100%;
+  color: #333;
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.features h2 {
+  color: #a7344d;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: #fff5f7e7;
+  border: 1px solid #f4c2c2fa;
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stats {
+  background: #a7344d;
+  color: white;
+  margin-top: 10rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+
+.stats h2 {
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stats-grid div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  min-width: 200px;
+  transition: 0.3s ease;
+}
+
+.stats-grid div:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
