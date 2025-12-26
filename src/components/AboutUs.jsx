@@ -126,9 +126,21 @@ const AboutUs = () => {
 
           <div className="team-card">
             {/* <img src={team2} alt="Team member" /> */}
-            <h4>Member Two</h4>
-            <p>Backend & Integrations</p>
+            <h4>Aman Bharti</h4>
+            <p>Frontend & Integrations</p>
           </div>
+          
+          <div className="team-card">
+            {/* <img src={team2} alt="Team member" /> */}
+            <h4>Anushka</h4>
+            <p>Frontend & Integrations</p>
+          </div>
+          
+          <div className="team-card">
+            {/* <img src={team2} alt="Team member" /> */}
+            <h4>Ankita</h4>
+            <p>Frontend </p>
+          </div>  
         </div>
       </section>
 

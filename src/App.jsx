@@ -82,18 +82,18 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-
-import Navbar from "/src/components/Navbar";
-import Center from "/src/components/Center";
-import Register from "/src/components/Register";
-import Login from "/src/components/Login";
+import Navbar from "./components/Navbar";
+import Center from "./components/Center";
+import Register from "./components/Register";
+import Login from "./components/Login";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import Community from "./components/Community";
 import FindBlood from "./components/FindBlood";
 import Footer from "./components/Footer";
 import Donate from "./components/Donate";
-import Event from "./components/event";
+import Event from "./components/Event";
+
 import "./App.css";
 
 // ✅ Separate component to use useLocation()

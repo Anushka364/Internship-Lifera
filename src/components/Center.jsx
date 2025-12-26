@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "../styles/Center.css"; // we'll style it separately
+import "../styles/center.css"; // we'll style it separately
 
 const Center = () => {
   const [animate, setAnimate] = useState(true);
